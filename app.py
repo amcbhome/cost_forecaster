@@ -14,7 +14,7 @@ with st.expander("📘 Show Regression & Correlation Formulas"):
 
 # 🔄 Updated Introduction Paragraph
 st.markdown("""
-Linear regressionusing historic data with a strong correlation. This model predicts the produciton cost from an input level of produciton.
+Linear regression using historic data to forecast production cost.
 """)
 
 # Step 1
@@ -31,8 +31,8 @@ else:
 
 # Display table with custom column labels
 display_df = df.rename(columns={
-    "x": "Activity level (000)",
-    "y": "Total production cost (000)"
+    "x": "Activity level",
+    "y": "Production cost"
 })
 st.dataframe(display_df)
 
