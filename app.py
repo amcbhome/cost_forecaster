@@ -12,6 +12,14 @@ with st.expander("📘 Show Regression & Correlation Formulas"):
     st.latex(r"a = \bar{y} - b\bar{x}")
     st.latex(r"r = \frac{n \sum xy - \sum x \sum y}{\sqrt{(n \sum x^2 - (\sum x)^2)(n \sum y^2 - (\sum y)^2)}}")
 
+# 💬 Explanatory paragraph before Step 1
+st.markdown("""
+In any relationship between two variables there is an **independent variable** and a **dependent variable**, the size of the movements in the dependent variable depending on the size of the movements of the independent variable.  
+For example: the **total cost of a production process** would be dependent on the **level of activity**.
+
+Consider the following data produced by a company over the last two years.
+""")
+
 st.subheader("Step 1: Upload or Enter Historical Data")
 uploaded_file = st.file_uploader("Upload CSV with columns: x, y", type="csv")
 
