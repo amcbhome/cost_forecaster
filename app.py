@@ -12,7 +12,7 @@ with st.expander("📘 Show Regression & Correlation Formulas"):
     st.latex(r"a = \bar{y} - b\bar{x}")
     st.latex(r"r = \frac{n \sum xy - \sum x \sum y}{\sqrt{(n \sum x^2 - (\sum x)^2)(n \sum y^2 - (\sum y)^2)}}")
 
-# 💬 Explanatory paragraph before Step 1
+# 💬 Explanatory paragraph
 st.markdown("""
 In any relationship between two variables there is an **independent variable** and a **dependent variable**, the size of the movements in the dependent variable depending on the size of the movements of the independent variable.  
 For example: the **total cost of a production process** would be dependent on the **level of activity**.
@@ -20,6 +20,7 @@ For example: the **total cost of a production process** would be dependent on th
 Consider the following data produced by a company over the last two years.
 """)
 
+# Step 1
 st.subheader("Step 1: Upload or Enter Historical Data")
 uploaded_file = st.file_uploader("Upload CSV with columns: x, y", type="csv")
 
@@ -31,8 +32,14 @@ else:
         "y": [300, 615, 470, 680, 520, 350, 590, 740]
     })
 
-st.dataframe(df)
+# Display table with custom column labels
+display_df = df.rename(columns={
+    "x": "Activity level (000)",
+    "y": "Total production cost (000)"
+})
+st.dataframe(display_df)
 
+# Calculations
 n = len(df)
 sum_x = df["x"].sum()
 sum_y = df["y"].sum()
@@ -47,11 +54,13 @@ b = (n * sum_xy - sum_x * sum_y) / (n * sum_x2 - sum_x**2)
 a = mean_y - b * mean_x
 r = (n * sum_xy - sum_x * sum_y) / np.sqrt((n * sum_x2 - sum_x**2) * (n * sum_y2 - sum_y**2))
 
+# Step 2: Show regression outputs
 st.subheader("Step 2: Regression Results")
 st.metric("Intercept (a)", f"{a:.2f}")
 st.metric("Slope (b)", f"{b:.2f}")
 st.metric("Correlation (r)", f"{r:.4f}")
 
+# Step 3: Forecasting
 st.subheader("Step 3: Forecast Cost")
 input_x = st.number_input("Enter projected activity level (x)", min_value=0, step=1)
 
