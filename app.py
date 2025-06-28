@@ -12,12 +12,11 @@ with st.expander("📘 Show Regression & Correlation Formulas"):
     st.latex(r"a = \bar{y} - b\bar{x}")
     st.latex(r"r = \frac{n \sum xy - \sum x \sum y}{\sqrt{(n \sum x^2 - (\sum x)^2)(n \sum y^2 - (\sum y)^2)}}")
 
-# 💬 Explanatory paragraph
+# 🔄 Updated Introduction Paragraph
 st.markdown("""
-In any relationship between two variables there is an **independent variable** and a **dependent variable**, the size of the movements in the dependent variable depending on the size of the movements of the independent variable.  
-For example: the **total cost of a production process** would be dependent on the **level of activity**.
-
-Consider the following data produced by a company over the last two years.
+Simple linear regression shows how one variable changes in response to another using a straight-line equation.  
+Correlation tells us how strongly and in what direction the two variables are linked — whether they rise or fall together or move in opposite directions.  
+When the correlation is strong, regression can be used to create a simple predictive model that estimates future values based on past data.
 """)
 
 # Step 1
