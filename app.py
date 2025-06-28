@@ -4,7 +4,7 @@ import numpy as np
 
 st.set_page_config(page_title="Cost Forecasting Tool", layout="centered")
 
-st.title("📈 Linear Regression Cost Forecaster")
+st.title("📈 Predictive Analytics")
 
 with st.expander("📘 Show Regression & Correlation Formulas"):
     st.latex(r"y = a + bx")
@@ -14,9 +14,7 @@ with st.expander("📘 Show Regression & Correlation Formulas"):
 
 # 🔄 Updated Introduction Paragraph
 st.markdown("""
-Simple linear regression shows how one variable changes in response to another using a straight-line equation.  
-Correlation tells us how strongly and in what direction the two variables are linked — whether they rise or fall together or move in opposite directions.  
-When the correlation is strong, regression can be used to create a simple predictive model that estimates future values based on past data.
+Linear regressionusing historic data with a strong correlation. This model predicts the produciton cost from an input level of produciton.
 """)
 
 # Step 1
