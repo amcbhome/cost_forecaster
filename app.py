@@ -4,11 +4,10 @@ import numpy as np
 
 st.set_page_config(page_title="Cost Forecasting Tool", layout="centered")
 
-st.title("📈 Predictive Analytics")
+st.title("Production Cost Forecast")
 
-# 🔄 Updated Introduction Paragraph
 st.markdown("""
-Linear regression using historic data to forecast production cost.
+**Linear regression analysis of the correlation between activity and cost [Source](https://www.accaglobal.com/uk/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/regression.html)**
 """)
 
 # Step 1
