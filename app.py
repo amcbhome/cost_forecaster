@@ -6,12 +6,6 @@ st.set_page_config(page_title="Cost Forecasting Tool", layout="centered")
 
 st.title("📈 Predictive Analytics")
 
-with st.expander("📘 Show Regression & Correlation Formulas"):
-    st.latex(r"y = a + bx")
-    st.latex(r"b = \frac{n \sum xy - \sum x \sum y}{n \sum x^2 - (\sum x)^2}")
-    st.latex(r"a = \bar{y} - b\bar{x}")
-    st.latex(r"r = \frac{n \sum xy - \sum x \sum y}{\sqrt{(n \sum x^2 - (\sum x)^2)(n \sum y^2 - (\sum y)^2)}}")
-
 # 🔄 Updated Introduction Paragraph
 st.markdown("""
 Linear regression using historic data to forecast production cost.
